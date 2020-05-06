@@ -126,6 +126,8 @@ bool result = expression.Execute<Boolean>();
 * Format(value [, format])  -- Formats a number or date/time
 * Len(text) -- returns the length of a string
 * Custom functions can be created by extending Function and registered it via `Engine.Register(Function)`
+* Substring(_'string'_, _index_, _length_) -- ex: `Substring('Hello World', 0, 7)` This will return `Hello W`
+* ToUpper(_'string'_) -- ex: `ToUpper(Substring('Hello World', 0, 7))` this will return `HELLO W`
 
 ### Supported data types (can be extended)
 * Number/decimal
@@ -159,6 +161,8 @@ bool result = expression.Execute<Boolean>();
 * Len(text)
   - Returns the length of a string
   - Example: Len('abc') -- returns 3
+* ToUpper(string) + Substring(string, index, length)
+  - ToUpper(Substring('hello world', 0, 5) + ' jayson') -- returns HELLO JAYSON
 
 ### Supported Operations (can be extended)
 * +		- addition  (numbers, date/time + number, string concatenation)
