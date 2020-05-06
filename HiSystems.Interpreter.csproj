@@ -62,8 +62,10 @@
     <Compile Include="Functions\Len.cs" />
     <Compile Include="Functions\Max.cs" />
     <Compile Include="Functions\Min.cs" />
+    <Compile Include="Functions\Substring.cs" />
     <Compile Include="Functions\Sum.cs" />
     <Compile Include="Functions\Today.cs" />
+    <Compile Include="Functions\ToUpper.cs" />
     <Compile Include="Library\PeekableEnumerator.cs" />
     <Compile Include="Literals\Array.cs" />
     <Compile Include="Literals\Boolean.cs" />

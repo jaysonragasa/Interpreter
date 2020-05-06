@@ -22,6 +22,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Diagnostics;
+using HiSystems.Interpreter.Functions;
 
 namespace HiSystems.Interpreter
 {
@@ -196,6 +197,9 @@ namespace HiSystems.Interpreter
             Register(new ArrayFunction());
             Register(new Today());
             Register(new Len());
+
+            Register(new Substring());
+            Register(new ToUpper());
         }
 
         /// <summary>
