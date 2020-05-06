@@ -92,6 +92,12 @@ var expression = new Engine().Parse("'$ ' + Format(Amount, '0.00')");
 expression.Variables["Amount"].Value = (Number)1;
 string result = expression.Execute<Text>();
 ```
+  
+```csharp
+var engine = new Engine();
+var xp = engine.Parse("ToUpper(Substring('hello world', 0, 5) + ' jayson')");
+string result = xp.Execute<Text>();
+```
 
 7. Working with dates:
 ```csharp
@@ -161,8 +167,9 @@ bool result = expression.Execute<Boolean>();
 * Len(text)
   - Returns the length of a string
   - Example: Len('abc') -- returns 3
-* ToUpper(string) + Substring(string, index, length)
-  - ToUpper(Substring('hello world', 0, 5) + ' jayson') -- returns HELLO JAYSON
+* ToUpper(string)
+  - Example: ToUpper('jayson') -- returns JAYSON
+* Substring('Hello Jayson', 6, 6) -- returns Jayson
 
 ### Supported Operations (can be extended)
 * +		- addition  (numbers, date/time + number, string concatenation)
