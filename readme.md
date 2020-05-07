@@ -162,6 +162,7 @@ public class Convert_Interpret : IValueConverter
 * Custom functions can be created by extending Function and registered it via `Engine.Register(Function)`
 * Substring(_'string'_, _index_, _length_) -- ex: `Substring('Hello World', 0, 7)` This will return `Hello W`
 * ToUpper(_'string'_) -- ex: `ToUpper(Substring('Hello World', 0, 7))` this will return `HELLO W`
+* ToTitleCase(value) - Returns a Title format string.
 
 ### Supported data types (can be extended)
 * Number/decimal
@@ -195,9 +196,13 @@ public class Convert_Interpret : IValueConverter
 * Len(text)
   - Returns the length of a string
   - Example: Len('abc') -- returns 3
-* ToUpper(string)
+* ToUpper(value)
   - Example: ToUpper('jayson') -- returns JAYSON
-* Substring('Hello Jayson', 6, 6) -- returns Jayson
+* Substring(value, firstIndex, string_length)
+  - Example: Substring('hello jayson', 6, 6) --  returns Jayson
+* ToTitleCase(value)
+  - Returns a title format of a string
+  - Example: ToTitleCase('hello jayson') -- returns Hello Jayon
 
 ### Supported Operations (can be extended)
 * +		- addition  (numbers, date/time + number, string concatenation)
