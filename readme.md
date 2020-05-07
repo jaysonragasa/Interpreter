@@ -124,6 +124,34 @@ bool result = expression.Execute<Boolean>();
  decimal result = expression2.Execute<Number>();
 ```
 
+10. Using in Xamarin with inline code with Converter.
+![](https://raw.githubusercontent.com/jaysonragasa/Interpreter/master/test%2005-07-2020-15-01-59.gif)
+```csharp
+public class Convert_Interpret : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        string result = string.Empty;
+
+        if (!string.IsNullOrEmpty((string)value))
+        {
+            var e = ((App)Application.Current).Interpret;
+            var xp = e.Parse((string)parameter);
+            xp.Variables["A"].Value = new Text((string)value);
+            result = xp.Execute<Text>();
+        }
+
+        return result;
+    }
+
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return value;
+    }
+}
+```
+
+
 ### Supported Functions 
 * SUM(array)
 * AVG(array)
