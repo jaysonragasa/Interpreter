@@ -65,6 +65,7 @@
     <Compile Include="Functions\Substring.cs" />
     <Compile Include="Functions\Sum.cs" />
     <Compile Include="Functions\Today.cs" />
+    <Compile Include="Functions\ToTitleCase.cs" />
     <Compile Include="Functions\ToUpper.cs" />
     <Compile Include="Library\PeekableEnumerator.cs" />
     <Compile Include="Literals\Array.cs" />

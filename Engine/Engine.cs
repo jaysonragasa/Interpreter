@@ -200,6 +200,7 @@ namespace HiSystems.Interpreter
 
             Register(new Substring());
             Register(new ToUpper());
+            Register(new ToTitleCase());
         }
 
         /// <summary>

@@ -18,10 +18,19 @@
             decimal index = base.GetTransformedArgument<Number>(arguments, argumentIndex: 1);
             decimal length = base.GetTransformedArgument<Number>(arguments, argumentIndex: 2);
 
+            string ret = string.Empty;
+
+            try
+            {
+                ret = toparse.Substring(
+                        (int)index,
+                        (int)length
+                );
+            }
+            catch { }
+
             return new Text(
-                toparse.Substring(
-                    (int)index, 
-                    (int)length)
+                ret
             );
         }
     }
