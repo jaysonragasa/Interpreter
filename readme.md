@@ -126,6 +126,10 @@ bool result = expression.Execute<Boolean>();
 
 10. Using in Xamarin with inline code with Converter.
 ![](https://raw.githubusercontent.com/jaysonragasa/Interpreter/master/test%2005-07-2020-15-01-59.gif)
+  
+    **Condition example**
+      
+![](https://raw.githubusercontent.com/jaysonragasa/Interpreter/master/2020-05-07_2333.png)
 ```csharp
 public class Convert_Interpret : IValueConverter
 {
