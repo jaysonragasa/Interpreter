@@ -1,5 +1,4 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Threading;
 
 namespace HiSystems.Interpreter.Functions
@@ -18,18 +17,15 @@ namespace HiSystems.Interpreter.Functions
         {
             string ret = null;
 
-            try
-            {
-                base.EnsureArgumentCountIs(arguments, 1);
+            base.EnsureArgumentCountIs(arguments, 1);
 
-                string toparse = base.GetTransformedArgument<Text>(arguments, argumentIndex: 0);
+            string toparse = base.GetTransformedArgument<Text>(arguments, argumentIndex: 0);
+            toparse = toparse.ToLowerInvariant();
 
-                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
-                TextInfo text = cultureInfo.TextInfo;
+            CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+            TextInfo text = cultureInfo.TextInfo;
 
-                ret = text.ToTitleCase(toparse);
-            }
-            catch { }
+            ret = text.ToTitleCase(toparse);
 
             return new Text(ret);
         }
